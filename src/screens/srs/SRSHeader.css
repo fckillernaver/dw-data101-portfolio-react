@@ -1,0 +1,39 @@
+header {
+  top: 0;
+  z-index: 10000;
+  display: flex;
+  background-color: white;
+  width: 100%;
+  border-bottom: 1px solid var(--gray2);
+  border-radius: 0;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+  padding: 0 10px;
+  width: calc(100% - 20px);
+}
+
+header.scrolled {
+  margin: 10px;
+  width: calc(100% - 40px);
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  border: none;
+}
+
+header button.title {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--gray9);
+}
+
+header button {
+  background-color: transparent;
+  height: 60px;
+}
+
+header button:hover {
+  background-color: transparent;
+  color: var(--blue5);
+}

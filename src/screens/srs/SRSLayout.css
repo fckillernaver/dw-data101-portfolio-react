@@ -1,0 +1,35 @@
+body {
+  overflow-y: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--blue5);
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 3px solid transparent;
+}
+
+#main {
+  background-color: magenta;
+  height: 100vh;
+}
+
+*::-webkit-scrollbar {
+  width: 20px;
+  background-color: tr;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var((--blue5));
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
