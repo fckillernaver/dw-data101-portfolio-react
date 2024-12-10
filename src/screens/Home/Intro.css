@@ -1,0 +1,13 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.intro h3 {
+  color: var(--blue5);
+}
+
+.intro h1.main {
+  color: var(--gray4);
+}

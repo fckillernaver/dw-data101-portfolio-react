@@ -1,0 +1,128 @@
+.section > div {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.section .bar {
+  height: 1px;
+  background-color: var(--gray7);
+  min-width: 30%;
+}
+
+.section .title > span {
+  color: var(--blue5);
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.section p.title {
+  color: var(--gray0);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.section.about ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.section.about h4 {
+  color: var(--gray4);
+  margin-bottom: 10px;
+}
+
+.section .wrap {
+  align-items: start;
+  margin-top: 30px;
+}
+
+.imgs img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  position: relative;
+  top: -4px;
+  left: -4px;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.imgs {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.imgs span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--blue5);
+  top: 4px;
+  left: 4px;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+
+.imgs:hover img {
+  transform: translate(-6px, -6px);
+}
+
+.imgs:hover span {
+  transform: translate(6px, 6px);
+}
+
+@media all and (min-width: 500px) {
+  .imgs img,
+  .imgs {
+    width: 250px;
+    height: 250px;
+  }
+  .imgs img {
+    top: -6px;
+    left: -6px;
+  }
+
+  .imgs span {
+    top: 6px;
+    left: 6px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .imgs img,
+  .imgs {
+    width: 300px;
+    height: 300px;
+  }
+  .imgs img {
+    top: -8px;
+    left: -8px;
+  }
+
+  .imgs span {
+    top: 8px;
+    left: 8px;
+  }
+}
+
+@media all and (min-width: 900px) {
+  .imgs img,
+  .imgs {
+    width: 400px;
+    height: 400px;
+  }
+  .imgs img {
+    top: -10px;
+    left: -10px;
+  }
+
+  .imgs span {
+    top: 10px;
+    left: 10px;
+  }
+}

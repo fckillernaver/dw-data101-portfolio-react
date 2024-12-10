@@ -26,3 +26,38 @@
   box-shadow: var(--boxShadow);
   transition: all 0.2s ease-out;
 }
+
+main#root {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+main#root::-webkit-scrollbar {
+  background-color: black;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  background-color: var(--gray7);
+  color: var(--blue6);
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+
+.icon:hover {
+  background-color: var(--gray7);
+  opacity: 0.8;
+  color: var(--blue5);
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: var(--shadow) var(--gray6);
+}
+
+.icon:active {
+  opacity: 0.5;
+  background-color: var(--gray6);
+  transform: scale(1);
+}

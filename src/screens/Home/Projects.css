@@ -1,0 +1,71 @@
+.pro {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.pro > div {
+  position: absolute;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid;
+  padding: 20px;
+  width: 80%;
+}
+
+.pro h6 {
+  color: var(--blue5);
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.pro p.title {
+  color: var(--gray5);
+}
+
+.pro p.dates {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.pro p.desc {
+  width: 80%;
+  line-height: 1.2;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.pro ul.lists {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.pro ul.lists > li {
+  background-color: var(--gray8);
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--gray6);
+  font-size: 0.7rem;
+}
+
+.pro ul.icons a {
+  background-color: transparent;
+  font-size: 30px;
+  border: 1px solid;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media all and (min-width: 768px) {
+  .pro div {
+    position: relative;
+  }
+}

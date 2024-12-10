@@ -1,0 +1,110 @@
+.skills {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.skills .stacks h4 {
+  color: var(--gray5);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.skills .stacks h4 span {
+  color: var(--blue5);
+}
+
+.skills .stack button {
+  background-color: transparent;
+  border-left: 1px solid;
+  padding: 10px 20px;
+  height: 40px;
+}
+
+.skills .stack button:hover {
+  background-color: var(--gray8);
+}
+
+.skills .stack button.selected {
+  color: var(--blue5);
+  border-color: unset;
+}
+
+.skills ul.stacks {
+  display: flex;
+  flex-direction: column;
+  /* row-gap: 30px */
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.skills ul.stacks li.noMg {
+  padding: 0;
+}
+
+.skills .stacks {
+  height: 200px;
+}
+
+.skills ul.stacks li.span {
+  height: 40px;
+  width: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--blue5);
+  transition: all 0.5s;
+}
+
+.skills ul.skill {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.skills ul.skill > li {
+  display: flex;
+  column-gap: 10px;
+  align-items: flex-start;
+}
+
+.skills ul.skill li > div:first-child {
+  border: 2px solid var(--blue5);
+  font-size: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills ul.skill li > div:first-child > :first-child {
+  border: 2px solid var(--blue5);
+  border-radius: 200px;
+  padding: 5px;
+}
+
+.skills ul.skill li > div:nth-child(2) {
+  flex: 1;
+}
+
+.skills ul.skill .icon0 {
+  color: var(--orange8);
+}
+
+.skills ul.skill .icon1 {
+  color: var(--blue7);
+}
+
+.skills ul.skill .icon2 {
+  color: var(--yellow5);
+}
+.skills ul.skill p {
+  line-height: 1.5;
+  font-size: 0.9rem;
+  font-weight: 100;
+}

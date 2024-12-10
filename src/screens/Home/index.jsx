@@ -1,37 +1,42 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import "./home.css";
-
-import {
-  IoLogoHtml5,
-  IoLogoCss3,
-  IoLogoReact,
-  IoLogoFirebase,
-  IoLogoJavascript,
-} from "react-icons/io5";
-import StackItem from "./StackItem";
-import { Link } from "react-router-dom";
+import Header from "./Header";
+import Intro from "./Intro";
+import About from "./About";
+import Skills from "./Skills";
+import Projects from "./Projects";
+import Contact from "./Contact";
+import Container from "./Container";
+import { useScreen } from "../../hooks";
 const Home = () => {
-  const [stacks] = useState([
-    { name: "HTML", Icon: IoLogoHtml5 },
-    { name: "CSS", Icon: IoLogoCss3 },
-    { name: "JavaScript", Icon: IoLogoJavascript },
-    { name: "React", Icon: IoLogoReact },
-    { name: "firebase", Icon: IoLogoFirebase },
-  ]);
+  const items = [
+    { id: "Intro", Component: Intro },
+    { id: "About", Component: About },
+    { id: "Skills", Component: Skills },
+    { id: "Projects", Component: Projects },
+    { id: "Contact", Component: Contact },
+  ];
+
+  const mainRef = useRef();
+
+  const [clientHeight, setClientHeight] = useState(0);
+  useEffect(() => {
+    setClientHeight(mainRef.current?.clientHeight ?? 0);
+  }, []);
+
   return (
-    <div>
-      <h1>DW-data101 portfolio site</h1>
-      <ul className="stack">
-        {stacks.map((item, i) => (
-          <StackItem {...item} key={i} />
-        ))}
-      </ul>
-      <ul>
-        <li>
-          <Link to={"srs"}>요구사항 명세서 프로젝트</Link>
-        </li>
-      </ul>
-    </div>
+    <>
+      <Header items={items} />
+      <main id="root" ref={mainRef}>
+        <div className="snap container">
+          {items.map(({ Component, id }, i) => (
+            <Container id={id} key={i} clientHeight={clientHeight} index={i}>
+              <Component id={id} index={i} />
+            </Container>
+          ))}
+        </div>
+      </main>
+    </>
   );
 };
 
