@@ -51,8 +51,8 @@
 }
 
 .imgs {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   position: relative;
 }
 
@@ -79,8 +79,8 @@
 @media all and (min-width: 500px) {
   .imgs img,
   .imgs {
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
   }
   .imgs img {
     top: -6px;

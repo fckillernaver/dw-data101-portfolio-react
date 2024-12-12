@@ -5,13 +5,11 @@ import { IoLink, IoLogoGithub } from "react-icons/io5";
 
 const Projects = () => {
   const { width } = useScreen();
-  const size = width - 60;
+  const size = width < 500 ? width - 60 : 500;
+
   return (
     <div className="projects">
       <div className="pro">
-        <div className="img">
-          <img src={img} alt="" style={{ width: size, height: size }} />
-        </div>
         <div>
           <h6>Main Project</h6>
           <div>
@@ -31,16 +29,21 @@ const Projects = () => {
           </ul>
           <ul className="icons">
             <li>
-              <a href="">
+              <a href="/srs">
                 <IoLink />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="https://github.com/fckillernaver/portfolio-react">
                 <IoLogoGithub />
               </a>
             </li>
           </ul>
+        </div>
+        <div className="img">
+          <div>
+            <img src={img} alt="" style={{ width: size, height: size }} />
+          </div>
         </div>
       </div>
     </div>
